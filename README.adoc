@@ -2,6 +2,9 @@
 
 Forked from https://github.com/janne[@janne]'s https://github.com/janne/go-lisp[Go Lisp]
 
+"If the program fails in these requirements, it will be in a state of disorder and confusion. The only way to
+correct this is to rewrite the program." -- http://www.mit.edu/~xela/tao.html[4.1 The Tao of Programming]
+
 
 
 == BUILD
