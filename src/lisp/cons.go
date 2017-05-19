@@ -220,11 +220,22 @@ func (cons Cons) isBuiltin() bool {
 	if _, ok := builtin_commands[s]; ok {
 		return true
 	}
-	return false
+	//AB: 19-May-17: Hook for Extension
+	_, isExt := registry[s]
+	return isExt
 }
 
 func (cons Cons) runBuiltin() (val Value, err error) {
-	cmd := builtin_commands[cons.car.String()]
+	//AB: 19-May-17: Hook for Extension
+	// TODO:
+	var cmd string
+	isExt := false
+	var ftor Functor
+	ftor, isExt = registry[cons.car.String()]
+	if !isExt {
+		cmd = builtin_commands[cons.car.String()]
+	}
+
 	vars, err := cons.cdr.Cons().Map(func(v Value) (Value, error) {
 		return v.Eval()
 	})
@@ -232,8 +243,13 @@ func (cons Cons) runBuiltin() (val Value, err error) {
 	for _, v := range vars {
 		values = append(values, reflect.ValueOf(v))
 	}
-	result := reflect.ValueOf(&builtin).MethodByName(cmd).Call(values)
-	val = result[0].Interface().(Value)
-	err, _ = result[1].Interface().(error)
+	var result []reflect.Value
+	if isExt {
+		val, err = ftor(values)
+	} else {
+		result = reflect.ValueOf(&builtin).MethodByName(cmd).Call(values)
+		val = result[0].Interface().(Value)
+		err, _ = result[1].Interface().(error)
+	}
 	return
 }

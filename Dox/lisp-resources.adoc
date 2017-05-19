@@ -1,5 +1,6 @@
 == List Resources
 
+https://en.wikipedia.org/wiki/Lisp_(programming_language)[Lisp Wikipedia]
 
 http://www.tutorialspoint.com/lisp/[List Tutorial]
 
