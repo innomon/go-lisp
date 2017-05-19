@@ -1,0 +1,14 @@
+= Go Lisp
+
+Forked from https://github.com/janne[@janne]'s https://github.com/janne/go-lisp[Go Lisp]
+
+
+
+== BUILD
+----
+export GOPATH=`pwd`:$GOPATH
+export GOBIN=`pwd`
+cd src
+go install  cmd/go-lisp.go
+----
+ 
