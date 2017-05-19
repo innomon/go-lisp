@@ -1,9 +1,26 @@
 == List Resources
 
+.Specs
+http://lisp-lang.org/[LISP LANG]
+
+https://github.com/LispLang/ansi-spec[git ANSI Common Lisp]
+
+http://www.gigamonkeys.com/book/[Practical Common Lisp Book]
+
+https://common-lisp.net/project/lispbox/[Lisp Box IDE]
+
+https://github.com/andreer/lispbox[GitHub: Emacs+SLIME+Common Lisp in one easy to install package]
+
+=== Other Resources
+
+Here are some useful Lisp language links:
+
 https://en.wikipedia.org/wiki/Lisp_(programming_language)[Lisp Wikipedia]
 
 http://www.tutorialspoint.com/lisp/[List Tutorial]
 
 http://www.tutorialspoint.com/lisp/lisp_tutorial.pdf[List Tutorial (pdf]
+
+http://www.jtra.cz/stuff/lisp/sclr/index.html[Simplified Common Lisp reference]
 
 
