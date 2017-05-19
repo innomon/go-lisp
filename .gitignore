@@ -1,3 +1,5 @@
 *.sw?
 pkg
+bin
+NetDox
 

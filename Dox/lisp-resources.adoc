@@ -1,0 +1,8 @@
+== List Resources
+
+
+http://www.tutorialspoint.com/lisp/[List Tutorial]
+
+http://www.tutorialspoint.com/lisp/lisp_tutorial.pdf[List Tutorial (pdf]
+
+
